@@ -16,7 +16,7 @@ export const SocketContextProvider = ({ children }) => {
        console.error('User ID is undefined');
        return;
      }
-    const socket = io('http://localhost:5000', {
+    const socket = io('/', {
       query: {
         userId: user?._id
       }
