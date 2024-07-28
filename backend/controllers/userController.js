@@ -4,7 +4,7 @@ import bcrypt from "bcryptjs";
 import mongoose from "mongoose";
 import { v2 as cloudinary } from "cloudinary";
 import Post from "../models/postModel.js";
-import generateTokenAndSetCookie from "../helpers/generateTokenandsetCookie.js";
+import generateTokenAndSetCookie from "../helpers/generate.js";
 
 const getUserProfile = async (req, res) => {
   const { query } = req.params;
