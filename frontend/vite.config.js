@@ -14,5 +14,8 @@ export default defineConfig({
         secure: false // remove /api from the request path to match the route in backend server
       }
     }
+  },
+  build: {
+    sourcemap: true // Bật sourcemaps trong quá trình build
   }
 });
