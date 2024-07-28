@@ -12,6 +12,10 @@ export const SocketContextProvider = ({ children }) => {
   const [onlineUsers, setOnlineUsers] = useState([]);
   const user = useRecoilValue(userAtom);
   useEffect(() => {
+     if (!user?._id) {
+       console.error('User ID is undefined');
+       return;
+     }
     const socket = io('http://localhost:5000', {
       query: {
         userId: user?._id
