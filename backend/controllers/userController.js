@@ -1,6 +1,6 @@
 import User from "../models/userModel.js";
 import bcrypt from "bcryptjs";
-import generateTokenAndSetCookie from "../helpers/generateTokenandsetCookie.js";
+import generateTokenandsetCookie from "../helpers/generateTokenandsetCookie.js";
 import mongoose from "mongoose";
 import { v2 as cloudinary } from "cloudinary";
 import Post from "../models/postModel.js";
