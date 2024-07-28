@@ -52,11 +52,8 @@ export default function UpdateProfilePage() {
         showToast('Error', data.error, 'error');
         return;
       }
-      
-      localStorage.setItem(
-        'user-socialmedia',
-        JSON.stringify(data.user)
-      );
+
+      localStorage.setItem('user-socialmedia', JSON.stringify(data.user));
       setUser(data.user);
       showToast('Edit', 'Success', 'success');
     } catch (error) {
@@ -77,26 +74,16 @@ export default function UpdateProfilePage() {
           boxShadow={'lg'}
           p={6}
         >
-          <Heading
-            lineHeight={1.1}
-            fontSize={{ base: '2xl', sm: '3xl' }}
-          >
+          <Heading lineHeight={1.1} fontSize={{ base: '2xl', sm: '3xl' }}>
             User Profile Edit
           </Heading>
           <FormControl id="userName">
             <Stack direction={['column', 'row']} spacing={6}>
               <Center>
-                <Avatar
-                  size="xl"
-                  boxShadow={'md'}
-                  src={imgUrl || user.profilePic}
-                />
+                <Avatar size="xl" boxShadow={'md'} src={imgUrl || user.profilePic} />
               </Center>
               <Center w="full">
-                <Button
-                  w="full"
-                  onClick={() => fileRef.current.click()}
-                >
+                <Button w="full" onClick={() => fileRef.current.click()}>
                   Change Avatar
                 </Button>
                 <Input
@@ -115,9 +102,7 @@ export default function UpdateProfilePage() {
             <Input
               placeholder="UserName"
               value={inputs.name}
-              onChange={e =>
-                setInputs({ ...inputs, name: e.target.value })
-              }
+              onChange={e => setInputs({ ...inputs, name: e.target.value })}
               _placeholder={{ color: 'gray.500' }}
               type="text"
             />
@@ -127,9 +112,7 @@ export default function UpdateProfilePage() {
             <Input
               placeholder="UserName"
               value={inputs.username}
-              onChange={e =>
-                setInputs({ ...inputs, username: e.target.value })
-              }
+              onChange={e => setInputs({ ...inputs, username: e.target.value })}
               _placeholder={{ color: 'gray.500' }}
               type="text"
             />
@@ -141,18 +124,14 @@ export default function UpdateProfilePage() {
               _placeholder={{ color: 'gray.500' }}
               type="email"
               value={inputs.email}
-              onChange={e =>
-                setInputs({ ...inputs, email: e.target.value })
-              }
+              onChange={e => setInputs({ ...inputs, email: e.target.value })}
             />
           </FormControl>
           <FormControl>
             <FormLabel>Bio</FormLabel>
             <Input
               value={inputs.bio}
-              onChange={e =>
-                setInputs({ ...inputs, bio: e.target.value })
-              }
+              onChange={e => setInputs({ ...inputs, bio: e.target.value })}
               placeholder="your bio ."
               _placeholder={{ color: 'gray.500' }}
               type="text"
@@ -165,9 +144,7 @@ export default function UpdateProfilePage() {
               _placeholder={{ color: 'gray.500' }}
               type="password"
               value={inputs.password}
-              onChange={e =>
-                setInputs({ ...inputs, password: e.target.value })
-              }
+              onChange={e => setInputs({ ...inputs, password: e.target.value })}
             />
           </FormControl>
           <Stack spacing={6} direction={['column', 'row']}>
